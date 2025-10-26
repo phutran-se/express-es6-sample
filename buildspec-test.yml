@@ -6,18 +6,19 @@ phases:
       nodejs: 18
     commands:
       - echo "Installing dependencies for testing..."
-      - npm install
+      - npm ci
   
   pre_build:
     commands:
       - echo "Pre-test phase started on `date`"
       - echo "Verifying test configuration..."
+      - npx jest --version
   
   build:
     commands:
       - echo "Test phase started on `date`"
       - echo "Running tests..."
-      - npm test
+      - npx jest --ci
       - echo "Tests completed on `date`"
   
   post_build:
