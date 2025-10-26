@@ -12,7 +12,6 @@ phases:
     commands:
       - echo "Pre-test phase started on `date`"
       - echo "Verifying test configuration..."
-      - npx jest --version
   
   build:
     commands:
